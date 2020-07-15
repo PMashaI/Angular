@@ -33,7 +33,6 @@ export class LoginScreenContaineromponent implements OnInit {
 
   ngOnInit(): void {
     this.subscription = this.count$.subscribe();
-    console.log(this.subscription);
   }
 
   ngOnDestroy() {
