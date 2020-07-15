@@ -1,4 +1,4 @@
-import { LoginScreenContaineromponent } from './containers';
+import { LoginScreenContainerСomponent } from './containers';
 import { LoginScreenRoutes } from './login-screen.routes';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { counterReducer } from './store/counter/reducer';
 
 @NgModule({
   declarations: [
-    LoginScreenContaineromponent
+    LoginScreenContainerСomponent
   ],
   imports: [
     CommonModule,

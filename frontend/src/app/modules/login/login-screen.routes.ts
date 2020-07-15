@@ -1,9 +1,9 @@
-import { LoginScreenContaineromponent } from "./containers";
+import { LoginScreenContainerСomponent } from "./containers";
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'login', component: LoginScreenContaineromponent }
+  { path: 'login', component: LoginScreenContainerСomponent }
 ] 
 
 @NgModule({

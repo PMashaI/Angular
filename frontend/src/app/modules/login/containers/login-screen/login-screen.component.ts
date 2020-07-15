@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./login-screen.component.scss']
 })
 
-export class LoginScreenContaineromponent implements OnInit {
+export class LoginScreenContainerСomponent implements OnInit {
   count$: Observable<number>;
   subscription: Subscription;
 
