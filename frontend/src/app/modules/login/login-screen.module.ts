@@ -15,7 +15,7 @@ import { counterReducer } from './store/counter/reducer';
     CommonModule,
     LoginScreenRoutes,
 
-    StoreModule.forRoot(counterReducer)
+    StoreModule.forRoot ({count: counterReducer})
   ]
   })
 
