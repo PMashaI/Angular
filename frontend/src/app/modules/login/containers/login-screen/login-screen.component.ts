@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Store, select } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { increment, decrement, reset } from '../../store/actions';
+import { Observable, Subscription } from 'rxjs';
+import { increment, decrement, reset } from '../../store/counter/actions';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login-screen',
   templateUrl: './login-screen.component.html',
   styleUrls: ['./login-screen.component.scss']
 })
-export class LoginScreenComponent implements OnInit {
+
+export class LoginScreenContainerСomponent implements OnInit {
   count$: Observable<number>;
- 
+  subscription: Subscription;
+
   constructor(private store: Store<{ count: number }>) {
     this.count$ = store.pipe(select('count'));
   }
@@ -29,6 +32,13 @@ export class LoginScreenComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.subscription = this.count$.subscribe();
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
 }
