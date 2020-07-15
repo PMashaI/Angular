@@ -5,7 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './play-screen.component.html',
   styleUrls: ['./play-screen.component.scss']
 })
-export class PlayScreenComponent implements OnInit {
+
+export class PlayScreenContainerComponent implements OnInit {
 
   constructor() { }
 
