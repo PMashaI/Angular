@@ -1,9 +1,8 @@
 import { LoginScreenContainerСomponent } from './containers';
 import { LoginScreenRoutes } from './login-screen.routes';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
-import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
@@ -11,6 +10,8 @@ import { StoreModule } from '@ngrx/store';
     LoginScreenContainerСomponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     LoginScreenRoutes
   ]

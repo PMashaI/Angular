@@ -18,7 +18,11 @@ module.exports = function(options) {
      */
     entry: {
       polyfills: './src/polyfills.ts',
-      main: ['./src/main.ts', './src/styles/main.scss'],
+      main: [
+        './src/main.ts', 
+        './src/styles/main.scss',
+        './node_modules/primeicons/primeicons.css'
+      ],
       vendors : ['./src/vendors.js']
     },
 
@@ -35,7 +39,7 @@ module.exports = function(options) {
        *
        * See: https://webpack.js.org/configuration/resolve/#resolve-extensions
        */
-      extensions: ['.js', '.ts', '.html'],
+      extensions: ['.js', '.ts', '.html', 'css'],
 
       /**
        * An array of directory names to be resolved to the current directory
@@ -64,6 +68,12 @@ module.exports = function(options) {
         {
           test: /\.html$/,
           exclude: helpers.root('src','index.html'),
+          use: 'raw-loader'
+        },
+
+        // Styles
+        {
+          test: /\.css$/,
           use: 'raw-loader'
         },
 

@@ -12,9 +12,8 @@
         <input type="password" pPassword placeholder="Password" [(ngModel)]="password"/> 
     </div>
 
-    <p-button (click)="handleClick()" label="Login">
-        <button class="ui-button ui-widget ui-corner-all ui-button-text-only">
+    <button class="ui-button ui-widget ui-corner-all ui-button-text-only" 
+    pButton type="button" label="Login" (click)="handleClick()">
         <span class="ui-button-text ui-clickable">Login</span>
-        </button>
-    </p-button>
+    </button>
 </div>

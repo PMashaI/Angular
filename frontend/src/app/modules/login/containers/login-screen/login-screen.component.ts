@@ -16,14 +16,10 @@ export class LoginScreenContainerСomponent implements OnInit {
   }
 
   ngOnInit(): void {
-    var showSpinner: boolean = true;
-  }
-
-  ngOnDestroy() {
   }
 
   handleClick(): void{
-    console.log('clicked');
+    console.log(this.username + ' ' + this.password);
   }
 
 }
