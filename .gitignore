@@ -12,6 +12,8 @@
 /backend/package-lock.json
 /frontend/node_modules
 /frontend/package-lock.json
+/frontend/dist
+/frontend/webpack-cache
 
 # profiling files
 chrome-profiler-events*.json
