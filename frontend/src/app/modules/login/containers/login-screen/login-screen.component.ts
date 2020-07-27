@@ -12,7 +12,7 @@ export class LoginScreenContainerСomponent implements OnInit {
   username: string;
   password: string;
 
-  constructor(private store: Store<{ count: number }>) {
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -20,6 +20,10 @@ export class LoginScreenContainerСomponent implements OnInit {
   }
 
   ngOnDestroy() {
+  }
+
+  handleClick(): void{
+    console.log('clicked');
   }
 
 }
