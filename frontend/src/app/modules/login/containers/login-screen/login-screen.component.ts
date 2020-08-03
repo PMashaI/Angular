@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Store } from '@ngrx/store';
-
 @Component({
   selector: 'app-login-screen',
   templateUrl: './login-screen.component.html',
@@ -11,8 +9,9 @@ import { Store } from '@ngrx/store';
 export class LoginScreenContainerСomponent implements OnInit { 
   username: string;
   password: string;
+  url: string = '/login';
 
-  constructor() {
+  constructor(/*public $http: ng.IHttpService*/) {
   }
 
   ngOnInit(): void {
@@ -20,6 +19,11 @@ export class LoginScreenContainerСomponent implements OnInit {
 
   handleClick(): void{
     console.log(this.username + ' ' + this.password);
+    
+    /*this.$http.post(this.url, {username: this.username, password: this.password}).then((response: any) => {
+      console.log(response.data);
+      return response.data;
+  });*/
   }
 
 }

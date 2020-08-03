@@ -20,8 +20,7 @@ module.exports = function(options) {
       polyfills: './src/polyfills.ts',
       main: [
         './src/main.ts', 
-        './src/styles/main.scss',
-        './node_modules/primeicons/primeicons.css'
+        './src/styles/main.scss'
       ],
       vendors : ['./src/vendors.js']
     },
